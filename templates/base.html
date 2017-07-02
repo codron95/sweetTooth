@@ -1,0 +1,39 @@
+{% load staticfiles %}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>SweetTooth Restaurant</title>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{% static 'css/baseline.css' %}">
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="{% static 'js/misc.js' %}"></script>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-custom">
+	<div class="navbar-header">
+		<div class="navbar-brand">
+			<img src="{% static 'images/logo.png' %}" class="img-logo img-responsive"/>
+		</div>
+	</div>
+	<div class="nav navbar-nav navbar-right navi-custom">
+	{% if not username %}
+		<li><a href="/">Home</a></li>
+		<li><a href="/login">Login</a></li>
+		<li><a href="/register">Register</a></li>
+	{% endif %}
+	{% if username %}
+		<span class="navbar-text navbar-text-custom">Hi {{ username | title }}</span>
+		<a href="/logout" class="btn btn-danger navbar-btn">Logout</a>
+	{% endif %}
+	</div>
+</div>
+{% block content %}
+{% endblock %}
+</body>
+</html>

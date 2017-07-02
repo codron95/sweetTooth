@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="content-area">
+	<img class="img-banner" src="{% static 'images/logo.png' %}" />
+	<form id="registerForm" class="login-form" method="POST">
+		{% for field in form %}
+		{{field}}
+		<h5 class="error-messages" id="error_{{ field.name }}"></h5>
+		{% endfor %}
+		{% csrf_token %}
+		<input type="submit" value="Register" class="btn btn-custom">
+	</form>
+	<div class="alert alert-info alert-message">
+		<strong>Successfully Registered.!!!</strong>
+	</div>
+	<hr>
+	<h5>Already Registered?
+	<a href="/login" class="custom-link">Sign In</a>
+	</h5>
+</div>
+{% endblock %}

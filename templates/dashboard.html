@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="container food-item-container">
+	{% for item in foodItems %}
+		{% if forloop.first %}<div class="row">{% endif %}
+		<div class="col-lg-3 padded">
+			<div class="col-content">
+				<img class="img-food" src="{{ item.image.url }}">
+				<h4>{{ item.name }}</h4>
+				<h5>${{ item.price | floatformat }}</h5>
+			</div>
+		</div>
+		{% if forloop.counter|divisibleby:4 %}</div><div class="row">{% endif %}
+		{% if forloop.last %}</div>{% endif %}
+	{% endfor %}
+
+<div class="pagination">
+    <span class="step-links">
+        {% if foodItems.has_previous %}
+            <a href="?page={{ foodItems.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ foodItems.number }} of {{ foodItems.paginator.num_pages }}.
+        </span>
+
+        {% if foodItems.has_next %}
+            <a href="?page={{ foodItems.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
+</div>
+{% endblock %}

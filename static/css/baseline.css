@@ -1,0 +1,165 @@
+body{
+	margin:0;
+	padding:0;
+	background-image:url(../images/bg.png);
+	position:relative;
+}
+
+.navi-custom li a:hover{
+	background-color:gray !important;
+	color:white !important;
+	border-radius:2px;
+}
+
+.img-logo{
+	height:30px;
+	position:relative;
+	top:-4px;
+}
+
+.navbar-custom{
+	padding-right:40px;
+	border-radius:0;
+}
+
+.content-area{
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:400px;
+	transform:translate(-50%,-40%);
+	background:#fffff8;
+	text-align:center;
+	box-shadow:1px 1px 1px 1px #777777;
+	padding:30px 20px;
+}
+
+.login-form{
+	width:100%;
+	text-align:center;
+}
+
+.img-banner{
+	width:50%;
+	margin-top:-28%;
+	margin-bottom:20px;
+}
+
+.text{
+	width:80%;
+	height:40px;
+	padding-left:10px;
+	font-size:16px;
+	color:#777777;
+	font-weight:600;
+	border-top:0;
+	border-right:0;
+	border-left:0;
+	border-bottom:solid 2px #777777;
+	background-color:#fffff8;
+}
+
+.text:nth-child(n+2){
+	margin-top:10px;
+}
+
+.text:focus{
+	outline:0;
+}
+
+.btn-custom{
+	margin-top:25px;
+	border-radius:0;
+	width:80%;
+	height:45px;
+	font-size:18px;
+	color:white;
+	background-color:#86C9C6;
+}
+
+.btn-register{
+	width:20%;
+}
+
+.btn-custom:hover{
+	color:white;
+	background-color:#76C8BA;
+}
+
+.btn-custom:active{
+	box-shadow:inset 1px 1px 1px 1px #39C48E;
+}
+
+.btn-custom:focus{
+	outline:0;
+	border:none;
+}
+
+::-webkit-input-placeholder{
+	color:#dddddd;
+}
+
+hr{
+	background-color:#eeeeee;
+}
+
+h5{
+	font-size:15px;
+}
+
+.custom-link{
+	color:#76C8BA;
+}
+
+.custom-link:focus{
+	outline:none;
+}
+
+.custom-link:hover{
+	text-decoration:none;
+}
+
+.alert-message{
+	margin-top:5px;
+	display:none;
+}
+
+.error-messages{
+	color:#FF739E;
+}
+
+.navbar-text-custom{
+	font-size:18px;
+}
+
+.padded{
+	padding:20px 20px;
+}
+
+.img-food{
+	width:100%;
+}
+
+.col-content{
+	padding-bottom:10px;
+	background-color:#fffff8;
+}
+
+h4{
+	margin-top:15px;
+	color:#86C9C6;
+	text-align:center;
+}
+
+h5{
+	color:#777777;
+	text-align:center;
+}
+
+.food-item-container{
+	text-align:center;
+}
+
+.pagination{
+	display:inline-block;
+}
